@@ -1,0 +1,10 @@
+html
+    head
+        include mixins/header
+        +header
+    body(data-bs-theme="dark")
+        include mixins/navbar
+        +navbar
+
+        .content.logout
+            p.text-center You have been logged out!

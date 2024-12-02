@@ -1,0 +1,30 @@
+html
+    head
+        include mixins/header
+        +header
+        script(src="/js/login.js")
+    body(data-bs-theme="dark")
+        include mixins/navbar
+        +navbar
+
+        .toast-container.position-fixed.bottom-0.end-0.p-3
+            #toast.toast(role="alert", aria-live="assertive", aria-atomic="true").bg-danger
+                .toast-header
+                    strong.me-auto Login Status
+                    button(type="button", class="btn-close", data-bs-dismiss="toast", aria-label="Close")
+                .toast-body
+                    p Login failed! Try a different username or password.
+
+        .content.login
+            h1 Log in to Your Account
+            .input-group.mt-3
+                span.input-group-text Username
+                input.form-control#username(type="text")
+            .input-group.mt-2
+                span.input-group-text Password 
+                input.form-control#password(type="password")
+            .d-flex(style="justify-content: center")
+                button.btn.btn-success.mt-3#submit Login
+
+        script(src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js")
+        script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js")

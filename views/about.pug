@@ -1,0 +1,40 @@
+html
+    head
+        include mixins/header
+        +header
+    body(data-bs-theme="dark")
+        include mixins/navbar
+        +navbar
+
+        .content
+            h1 Student Coursework Archive - More Information
+            h2 Use Cases
+            ul
+                li Students &amp; people seeking jobs
+                li Schools, universities, community colleges, other academic programs
+                li Employers
+            h2 How It Works
+            p
+                | Example - a high schooler applying for college, that has already completed coursework at a community college:
+            ol
+                li
+                    | Student requests their high school to submit their transcript to this app (as opposed to the high school needing to submit the transcript to the UC application, Common App, Coalition App, MIT application, etc.)
+                li
+                    | Student asks the same of the community college they completed a course at (and the college only has to submit it here).
+                li
+                    | Student requests their counselor and 3 teachers to write a letter of recommendation and submit it here (as opposed to these people submitting the letter to all the aforementioned applications).
+                li
+                    | Student cannot view the letters of recommendation (if they have waived their right to view them, which is advised), but they can view the transcript to ensure it is correct.
+                li
+                    | Student gives permission to universities (the ones they&apos;re applying to) to view these materials.
+                li
+                    | Universities may view all of these documents, including the letters of recommendation.
+                li
+                    | If the student wants to go to graduate school, they may request their university to submit another transcript here, and more letters of recommendation, and the next institution will also be able to view all of these materials.
+                li
+                    | Once uploaded to this app, none of the documents can be modified by the student or an institution, but the student may choose to remove documents (even documents they can&apos;t view).
+                li
+                    | Once applying for a job, the student may give access to a prospective employer to view their documents on this app.
+
+                script(src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js")
+        script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js")

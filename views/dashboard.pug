@@ -1,0 +1,22 @@
+html
+    head
+        include mixins/header
+        +header
+    body(data-bs-theme="dark")
+        include mixins/navbar
+        +navbar
+
+        .content
+            h1 Dashboard
+            .d-flex.gap-3.justify-content-center
+                each doc in documents
+                    .document
+                        p Document name: #{doc.name}
+                        p #{user.type == "School" ? "For Student: " + doc.student : "From School: " + doc.school}
+                        img(src=doc.image, onclick=`window.open("${doc.image}", "_blank").focus()`)
+
+            if user.type == "School"
+                .d-flex.justify-content-center.mt-4
+                    a.btn.btn-success(href="/create-document") Create Document
+        script(src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js")
+        script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js")
